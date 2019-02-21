@@ -1,0 +1,21 @@
+type Query{
+    version: String
+    users: [User]
+    posts: [Post]
+}
+
+type Mutation{
+    changerUserFirstname(id: ID, firstname: String): String
+}
+
+type User{
+    firstname: String
+    lastname: String
+    posts: [Post]
+}
+
+type Post{
+    title: String
+    description: String
+    author: User
+}
